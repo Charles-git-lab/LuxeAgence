@@ -65,9 +65,6 @@ def register(request):
             user.password = password
             user.set_password(user.password)
             user.save()
-
-            message = "Votre compte a bien été créé. Vous allez être redirigé vers la page de connexion dans 3 secondes."
-            time.sleep(10)
             return redirect('login')
 
             print("=="*5, " NEW POST: ",name,email,password, "=="*5)
